@@ -16,8 +16,7 @@
     "prebuild": "rimraf dist && mkdirp dist",
     "build": "./script/build",
     "prepublish": "yarn run build",
-    "update-website": "ts-node ./script/update-website.ts",
-    "postinstall": "npm run-script build"
+    "update-website": "ts-node ./script/update-website.ts"
   },
   "repository": {
     "type": "git",
