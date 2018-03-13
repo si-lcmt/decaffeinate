@@ -12,9 +12,9 @@
     "lint": "tslint --config tslint.json --project tsconfig.json --type-check",
     "lint-fix": "tslint --config tslint.json --project tsconfig.json --type-check --fix",
     "pretest": "yarn run build",
-    "test": "mocha 'test/**/*.ts'",
-    "prebuild": "rimraf dist && mkdirp dist && npm run lint",
-    "build": "script/build",
+    "test": "npm run lint && mocha 'test/**/*.ts'",
+    "prebuild": "rimraf dist && mkdirp dist",
+    "build": "./script/build",
     "prepublish": "yarn run build",
     "update-website": "ts-node ./script/update-website.ts"
   },
@@ -51,16 +51,7 @@
     "lines-and-columns": "^1.1.5",
     "magic-string": "^0.22.1",
     "mz": "^2.7.0",
-    "tslib": "^1.7.1"
-  },
-  "engines": {
-    "node": ">=6"
-  },
-  "files": [
-    "bin",
-    "dist"
-  ],
-  "devDependencies": {
+    "tslib": "^1.7.1",
     "@types/babel-core": "^6.7.14",
     "@types/babylon": "^6.16.1",
     "@types/fs-extra": "^5.0.0",
@@ -76,6 +67,16 @@
     "ts-node": "^5.0.0",
     "tslint": "^5.5.0",
     "typescript": "^2.4.1"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "devDependencies": {
+
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
