@@ -17,7 +17,7 @@
     "build": "./script/build",
     "prepublish": "yarn run build",
     "update-website": "ts-node ./script/update-website.ts",
-    "postinstall": "cd . && npm install && npm run build && rm -rf ./node_modules"
+    "postinstall": "postinstall-build dist"
   },
   "repository": {
     "type": "git",
@@ -52,6 +52,7 @@
     "lines-and-columns": "^1.1.5",
     "magic-string": "^0.22.1",
     "mz": "^2.7.0",
+    "postinstall-build": "^5.0.1",
     "tslib": "^1.7.1"
   },
   "engines": {
