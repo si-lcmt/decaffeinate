@@ -16,7 +16,7 @@
     "prebuild": "rimraf dist && mkdirp dist",
     "build": "./script/build",
     "update-website": "ts-node ./script/update-website.ts",
-    "postinstall": "npm install --ignore-scripts && npm run build && rimraf node_modules"
+    "postinstall": "npm install --ignore-scripts && npm run build"
   },
   "repository": {
     "type": "git",
