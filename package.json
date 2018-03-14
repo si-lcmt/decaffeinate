@@ -17,7 +17,7 @@
     "build": "./script/build",
     "prepublish": "yarn run build",
     "update-website": "ts-node ./script/update-website.ts",
-    "postinstall": "pwd"
+    "postinstall": "cd . && npm install && npm run build && rm -rf ./node_modules"
   },
   "repository": {
     "type": "git",
