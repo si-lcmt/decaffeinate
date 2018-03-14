@@ -73,7 +73,8 @@
   },
   "files": [
     "bin",
-    "dist"
+    "dist",
+    "script"
   ],
   "devDependencies": {
 
