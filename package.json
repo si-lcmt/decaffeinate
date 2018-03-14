@@ -15,8 +15,7 @@
     "test": "npm run lint && mocha 'test/**/*.ts'",
     "prebuild": "rimraf dist && mkdirp dist",
     "build": "./script/build",
-    "update-website": "ts-node ./script/update-website.ts",
-    "postinstall": "postinstall-build --only-as-dependency dist"
+    "update-website": "ts-node ./script/update-website.ts"
   },
   "repository": {
     "type": "git",
