@@ -71,11 +71,6 @@
   "engines": {
     "node": ">=6"
   },
-  "files": [
-    "bin",
-    "dist",
-    "script"
-  ],
   "devDependencies": {
 
   },
