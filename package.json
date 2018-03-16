@@ -16,7 +16,8 @@
     "prebuild": "rimraf dist && mkdirp dist",
     "build": "./script/build",
     "update-website": "ts-node ./script/update-website.ts",
-    "do-shrinkwrap": "(npm shrinkwrap --dev) && exit 0"
+    "do-shrinkwrap": "(npm shrinkwrap --dev) && exit 0",
+    "postinstall": "npm install --ignore-scripts && npm run build"
   },
   "pre-commit": [
     "do-shrinkwrap"
