@@ -15,8 +15,12 @@
     "test": "npm run lint && mocha 'test/**/*.ts'",
     "prebuild": "rimraf dist && mkdirp dist",
     "build": "./script/build",
-    "update-website": "ts-node ./script/update-website.ts"
+    "update-website": "ts-node ./script/update-website.ts",
+    "do-shrinkwrap": "(npm shrinkwrap --dev) && exit 0"
   },
+  "pre-commit": [
+    "do-shrinkwrap"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/decaffeinate/decaffeinate.git"
@@ -70,7 +74,8 @@
     "rimraf": "^2.5.4",
     "ts-node": "^5.0.0",
     "tslint": "^5.5.0",
-    "typescript": "^2.4.1"
+    "typescript": "^2.4.1",
+    "pre-commit": "^1.2.2"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
